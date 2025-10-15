@@ -14,7 +14,7 @@ public class UserService {
     }
 
     public String registerUser(UserModel userModel){
-        if (userRepository.findUsingEmail(userModel.getEmail())){
+        if (userRepository.isEmailExist(userModel.getEmail())){
             return "Email already registered";
         }
         userRepository.save(userModel);
