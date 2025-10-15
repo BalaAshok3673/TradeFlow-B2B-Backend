@@ -24,20 +24,19 @@ public class UserEntity {
     }
 
 
-    public UserEntity(long id , String userName , String userEmail , String userPass , String userRole){
+    public UserEntity(String userName , String userEmail , String userPass , String userRole){
         this.userEmail=userEmail;
-        this.id=id;
         this.userName=userName;
         this.userPass=userPass;
         this.userRole=userRole;
     }
 
 
-    public long getUserID() {
+    public long getId() {
         return id;
     }
 
-    public void setUserID(long id) {
+    public void setId(long id) {
         this.id = id;
     }
 
