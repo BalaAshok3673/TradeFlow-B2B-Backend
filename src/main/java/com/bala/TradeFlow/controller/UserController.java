@@ -3,22 +3,20 @@ package com.bala.TradeFlow.controller;
 import com.bala.TradeFlow.model.UserModel;
 import com.bala.TradeFlow.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
-@Controller
+@RestController
 @RequestMapping("/api/users")
 public class UserController {
 
-    @Autowired
-    private UserService userService;
+    private final UserService userService;
+
+    public UserController(UserService userService){
+        this.userService = userService;
+    }
 
     @PostMapping("/register")
     public String registerUser(@RequestBody UserModel userModel){
-        userService.registerUser(userModel);
-        return "User has been added successfully";
+        return userService.registerUser(userModel);
     }
 }
