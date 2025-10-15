@@ -14,10 +14,11 @@ public class UserService {
     }
 
     public String registerUser(UserModel userModel){
-        if (userRepository.isEmailExist(userModel.getEmail())){
-            return "Email already registered";
+        if (userRepository.existByEmail(userModel.getEmail())) {
+            return "E-mail already Registered";
         }
+
         userRepository.save(userModel);
-        return "User has been added successfully";
+        return "User has been created successfully";
     }
 }
