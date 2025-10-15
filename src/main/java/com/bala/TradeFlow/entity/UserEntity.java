@@ -8,7 +8,7 @@ public class UserEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long userID;
+    private long id;
     @Column(name = "user_name" ,nullable = false )
     private String userName;
     @Column(name = "user_email" ,nullable = false , unique = true)
@@ -24,9 +24,9 @@ public class UserEntity {
     }
 
 
-    public UserEntity(long userID , String userName , String userEmail , String userPass , String userRole){
+    public UserEntity(long id , String userName , String userEmail , String userPass , String userRole){
         this.userEmail=userEmail;
-        this.userID=userID;
+        this.id=id;
         this.userName=userName;
         this.userPass=userPass;
         this.userRole=userRole;
@@ -34,11 +34,11 @@ public class UserEntity {
 
 
     public long getUserID() {
-        return userID;
+        return id;
     }
 
-    public void setUserID(long userID) {
-        this.userID = userID;
+    public void setUserID(long id) {
+        this.id = id;
     }
 
     public String getUserName() {
