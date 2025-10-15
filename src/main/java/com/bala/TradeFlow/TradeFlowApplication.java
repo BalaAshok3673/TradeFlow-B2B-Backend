@@ -10,4 +10,5 @@ public class TradeFlowApplication {
 		SpringApplication.run(TradeFlowApplication.class, args);
 	}
 
+
 }

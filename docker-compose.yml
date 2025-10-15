@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: tradeflow_postgres
+    environment:
+      POSTGRES_USER: bala
+      POSTGRES_PASSWORD: "bala@1234"
+      POSTGRES_DB: tradeflow
+    ports:
+      - "5432:5432"
+    volumes:
+      - tradeflow_data:/var/lib/postgresql/data
+
+volumes:
+  tradeflow_data:
