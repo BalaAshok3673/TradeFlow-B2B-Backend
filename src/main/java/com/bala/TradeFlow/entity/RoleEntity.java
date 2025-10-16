@@ -1,4 +1,4 @@
-package com.bala.tradeflow.entity;
+package com.bala.TradeFlow.entity;
 
 import jakarta.persistence.*;
 

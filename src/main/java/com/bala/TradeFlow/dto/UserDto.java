@@ -1,5 +1,6 @@
 package com.bala.TradeFlow.dto;
 
+import java.util.Set;
 public class UserDto {
     private Long id;
     private String userName;
@@ -27,5 +28,6 @@ public class UserDto {
 
     public Set<String> getRoles() { return roles; }
     public void setRoles(Set<String> roles) { this.roles = roles; }
+
 }
-}
+
